@@ -334,6 +334,9 @@ body {
         color: rgb(241, 170, 5);
         text-shadow: 1px 2px 1px rgb(167, 1, 2);
     }
+    .arrow-right {
+        right: 50%;
+    }
     .arrow {
         color: black;
         font-size: 26px;
