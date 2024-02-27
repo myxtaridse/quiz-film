@@ -242,9 +242,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .body {
-        background-color: none;
-    }
     .main-container {
         background: url(./img/BV9nPbV81Cs.jpg);
         width: 100%;
