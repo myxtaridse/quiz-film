@@ -260,7 +260,7 @@ body {
         position: absolute;
         width: 85%;
         max-height: 70px;
-        border-radius: 20px;
+        border-radius: 20px 20px 0 0;
         color: rgb(241, 170, 5);
         text-shadow: 1px 2px 1px rgb(167, 1, 2);
         font-weight: 800;
@@ -340,7 +340,7 @@ body {
     }
     .arrow-right {
         right: 160px;
-        bottom: -100px;
+        bottom: -300px;
     }
     .arrow {
         color: black;
