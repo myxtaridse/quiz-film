@@ -284,7 +284,7 @@ body {
     .img-question {
         border-radius: 20px;
         filter: contrast(16px);
-        width: 100%;
+        width: 300;
     }
     .answers-container {
         display: flex;
@@ -295,7 +295,7 @@ body {
     }
     .answer-btn {
         background-color: #e7e4e4;
-        width: 100%;
+        width: 300px;
         padding: 15px;
         font-size: 18px;
         border-radius: 10px;
