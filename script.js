@@ -193,10 +193,8 @@ const showScore = () => {
     questionText.innerHTML = `Вы набрали ${score} из ${questions.length}`;
     if (score <= 12 && score > 8) {
         picture.innerHTML = `<img src='img/final-5.jpg' class='img-question img-finish'>`;
-    } else if (score <= 7 && score > 5) {
-        picture.innerHTML = `<img src='img/final-2.jpg' class='img-question img-finish'>`;
-    } else if (score <= 4 && score > 0) {
-        picture.innerHTML = `<img src='img/final-1.jpg' class='img-question img-finish'>`;
+    } else if (score <= 7 && score > 0) {
+        picture.innerHTML = `<img src='img/плохо.jpg' class='img-question img-finish'>`;
     } else {
         picture.innerHTML = `<img src='img/всё.jpg' class='img-question img-finish'>`;
     }
