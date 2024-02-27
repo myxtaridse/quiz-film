@@ -351,5 +351,6 @@ body {
         content: "Next ";
         color: rgb(241, 170, 5);
         text-shadow: 1px 2px 1px rgb(167, 1, 2);
+        margin-right: 10px;
     }
 }
