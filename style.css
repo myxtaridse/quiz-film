@@ -284,7 +284,7 @@ body {
         border-radius: 20px;
         filter: contrast(16px);
         width: 80%;
-        max-width: 200px;
+        max-width: 300px;
     }
     .answers-container {
         display: flex;
@@ -295,8 +295,8 @@ body {
     }
     .answer-btn {
         background-color: #e7e4e4;
-        width: 70%;
-        max-width: 150px;
+        width: 80%;
+        max-width: 300px;
         padding: 15px;
         font-size: 18px;
         border-radius: 10px;
