@@ -270,7 +270,7 @@ body {
     }
     .answers-and-image-container {
         position: absolute;
-        top: 27%;
+        top: 15%;
         display: flex;
         flex-direction: column;
         align-items: center;
