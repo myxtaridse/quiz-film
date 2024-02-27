@@ -242,8 +242,11 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .body {
+        background-color: none;
+    }
     .main-container {
-        background-image: url(./img/BV9nPbV81Cs.jpg);
+        background: url(./img/BV9nPbV81Cs.jpg);
         width: 100%;
         height: 100vh;
         position: relative;
@@ -251,6 +254,7 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 20px;
+        background-repeat: no-repeat;
     }
     
     .question-container {
