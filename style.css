@@ -277,10 +277,10 @@ body {
         align-items: center;
         justify-content: space-between;
         background-color: rgba(0, 0, 0, 0.841);
-        padding: 40px 80px;
-        row-gap: 50px;
+        padding: 0;
+        row-gap: 0;
         border-radius: 20px;
-        margin: 20px;
+        margin: 0;
     }
     .img-question {
         border-radius: 20px;
@@ -292,7 +292,7 @@ body {
         flex-direction: column;
         align-items: left;
         justify-content: center;
-        row-gap: 30px;
+        row-gap: 15px;
     }
     .answer-btn {
         background-color: #e7e4e4;
@@ -323,7 +323,7 @@ body {
         justify-content: center;
         cursor: pointer;
         position: absolute;
-        bottom: 20px;
+        bottom: 0;
     }
     .arrow-container:hover {
         background-color: black;
@@ -340,6 +340,6 @@ body {
     }
     .arrow {
         color: black;
-        font-size: 26px;
+        font-size: 20px;
     }
 }
