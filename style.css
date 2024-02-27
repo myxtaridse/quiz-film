@@ -313,8 +313,6 @@ body {
     }
     
     .arrow-container{
-        position: absolute;
-        top: 50%;
         background-color: rgb(243, 241, 241);
         border-radius: 50%;
         width: 60px;
@@ -323,6 +321,8 @@ body {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        position: absolute;
+        bottom: 20px;
     }
     .arrow-container:hover {
         background-color: black;
@@ -333,12 +333,6 @@ body {
     .arrow-container:hover .arrow{
         color: rgb(241, 170, 5);
         text-shadow: 1px 2px 1px rgb(167, 1, 2);
-    }
-    .arrow-left {
-        left: -40px;
-    }
-    .arrow-right {
-        right: -40px;
     }
     .arrow {
         color: black;
