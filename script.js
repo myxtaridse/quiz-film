@@ -154,7 +154,7 @@ const showQuestions = () => {
     let questionNo = currentQuestionIndex + 1;
     questionText.innerHTML = questionNo + '. ' + currentQuestion.question;
     picture.innerHTML = `<img src='${currentQuestion.img}' class='img-question'>`;
-
+    
     currentQuestion.answers.forEach((answer) => {
         const button = document.createElement('button');
         button.innerHTML = answer.text;
