@@ -122,7 +122,7 @@ body {
 
 .img-finish {
     width: 500px;
-    margin-left: 100px;
+    margin-left: 50%;
 }
 
 
@@ -241,60 +241,70 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: "Comfortaa", sans-serif;
+        background-color: black;
+    }
+
     .main-container {
-        background-image: url(./img/BV9nPbV81Cs.jpg);
+        background-image: url(./img/фон.svg);
         width: 100%;
         height: 100vh;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding: 40px;
         background-repeat: no-repeat;
         border-radius: 0;
         margin: 0;
     }
-    
-    .question-container {
-        position: absolute;
-        width: 85%;
-        max-height: 70px;
-        border-radius: 20px 20px 0 0;
-        color: rgb(241, 170, 5);
-        text-shadow: 1px 2px 1px rgb(167, 1, 2);
-        font-weight: 800;
+
+    .bg-container {
         background-color: rgba(0, 0, 0, 0.841);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        text-align: center;
-        margin-top: 51px;
-    }
-    .answers-and-image-container {
-        position: absolute;
-        top: 19%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        background-color: rgba(0, 0, 0, 0.841);
-        padding: 10px;
-        row-gap: 10px;
+        justify-content: center;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .question-container {
+        max-height: 70px;
+        color: rgb(241, 170, 5);
+        text-shadow: 1px 2px 1px rgb(167, 1, 2);
+        font-weight: 800;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .answers-and-image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
         border-radius: 0 0 20px 20px;
         margin: 0;
-        width: 85%;
     }
     .img-question {
         border-radius: 20px;
         filter: contrast(16px);
-        width: 300px;
+        width: 100%;
+        border: 3px solid rgba(241, 170, 5, 0.503);
     }
     .answers-container {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         justify-content: center;
         row-gap: 15px;
     }
@@ -308,7 +318,7 @@ body {
         cursor: pointer;
         border: 1px solid black;
         font-family: "Comfortaa", sans-serif;
-        color: black
+        color: black;
     }
     .answer-btn:hover {
         background-color: black;
@@ -316,19 +326,22 @@ body {
         color: rgb(241, 170, 5);
         text-shadow: 1px 2px 1px rgb(167, 1, 2);
     }
-    
+
     .arrow-container{
+        color: black;
+        --webkit-appearance: none;
         background-color: rgb(243, 241, 241);
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        border-radius: 30px;
+        width: 120px;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        position: absolute;
-        bottom: 0;
-    }
+        margin-top: 20px;
+        padding: 10px;
+        transition: all .5s;
+    }/*
     .arrow-container:hover {
         background-color: black;
         border: 1px solid rgb(241, 170, 5);
@@ -338,19 +351,49 @@ body {
     .arrow-container:hover .arrow{
         color: rgb(241, 170, 5);
         text-shadow: 1px 2px 1px rgb(167, 1, 2);
-    }
-    .arrow-right {
-        right: 160px;
-        top: 630px;
-    }
+    }*/
     .arrow {
         color: black;
         font-size: 20px;
+        font-weight: 700;
     }
-    .arrow::before {
-        content: "Next ";
-        color: rgb(241, 170, 5);
-        text-shadow: 1px 2px 1px rgb(167, 1, 2);
-        margin-right: 10px;
+    .text-arrow {
+        margin: 5px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: "Comfortaa", sans-serif;
+    }
+    /*
+    @media (hover: none) {
+        .arrow-container:active {
+            background-color: black;
+            border: 1px solid rgb(241, 170, 5);
+            color: rgb(241, 170, 5);
+            text-shadow: 1px 2px 1px rgb(167, 1, 2);
+        }
+    }*/
+    @media (hover: hover) {
+        .arrow-container:hover {
+            background-color: black;
+            border: 1px solid rgb(241, 170, 5);
+            color: rgb(241, 170, 5);
+            text-shadow: 1px 2px 1px rgb(167, 1, 2);
+        } 
+        .arrow-container:hover .arrow{
+            color: rgb(241, 170, 5);
+            text-shadow: 1px 2px 1px rgb(167, 1, 2);
+        }
+    }
+    @media (hover: none) {
+        .arrow-container:active {
+            background-color: black;
+            border: 1px solid rgb(241, 170, 5);
+            color: rgb(241, 170, 5);
+            text-shadow: 1px 2px 1px rgb(167, 1, 2);
+        } 
+        .arrow-container:active .arrow{
+            color: rgb(241, 170, 5);
+            text-shadow: 1px 2px 1px rgb(167, 1, 2);
+        }
     }
 }
