@@ -96,7 +96,7 @@ body {
     cursor: pointer;
     margin-top: 20px;
     padding: 10px;
-    transition: all .1s;
+    transition: all .5s;
 }/*
 .arrow-container:hover {
     background-color: black;
