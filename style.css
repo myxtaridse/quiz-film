@@ -325,7 +325,7 @@ body {
         justify-content: center;
         cursor: pointer;
         position: absolute;
-        bottom: 20px;
+        bottom: 0;
     }
     .arrow-container:hover {
         background-color: black;
@@ -339,6 +339,7 @@ body {
     }
     .arrow-right {
         right: 160px;
+        bottom: 0;
     }
     .arrow {
         color: black;
