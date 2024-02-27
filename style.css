@@ -284,7 +284,7 @@ body {
     .img-question {
         border-radius: 20px;
         filter: contrast(16px);
-        width: 300;
+        width: 300px;
     }
     .answers-container {
         display: flex;
@@ -303,6 +303,7 @@ body {
         cursor: pointer;
         border: 1px solid black;
         font-family: "Comfortaa", sans-serif;
+        color: black
     }
     .answer-btn:hover {
         background-color: black;
