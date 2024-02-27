@@ -246,8 +246,6 @@ body {
         background-image: url(./img/BV9nPbV81Cs.jpg);
         width: 100%;
         height: 100vh;
-        border-radius: 20px;
-        margin: 70px auto;
         position: relative;
         display: flex;
         flex-direction: column;
