@@ -3,6 +3,7 @@ const picture = document.getElementById('picture');
 const answersContainer = document.getElementById('answers-container');
 const backBtn = document.getElementById('back-btn');
 const nextBtn = document.getElementById('next-btn');
+const scoreText = document.getElementById('answers-and-image-container');
 
 const questions = [
     {
@@ -191,16 +192,36 @@ const selectAnswer = (e) => {
 const showScore = () => {
     resetState();
     questionText.innerHTML = `Вы набрали ${score} из ${questions.length}`;
+    
     if (score <= 12 && score > 8) {
-        picture.innerHTML = `
-                        <img src='img/final-5.jpg' class='img-finish'>
+        scoreText.innerHTML = `
+                <div class='text-score'>
+                    <h1>Вы настоящий киноман!</h1>
+                    <p>На большое количество вопросов Вы ответили верно. Похоже просмотр фильмов - одно из ваших любимых занятий!</p>
+                </div>
         `;
-    } else if (score <= 7 && score >= 0) {
+        answersContainer.remove();
+    } else if (score <= 7 && score >= 3) {
         picture.innerHTML = `
-                        <img src='img/плохо.jpg' class='img-finish'>
+                <div class='text-score'>
+                    <h1>Иногда Вы не прочь посмотреть фильмы</h1>
+                    <p>Ярым фанатом кинематографа Вас, конечно, нельзя назвать. Однако просмотр фильмов Вас явно не чужд, и в свободное время Вы не прочь посмотреть кино.</p>
+                </div>
         `;
+        answersContainer.remove();
+    } else if (score <= 2 && score >= 0) {
+        picture.innerHTML = `
+                <div class='text-score'>
+                    <h1>Похоже Вы не любитель кино</h1>
+                    <p>Назвать просмотр фильмов вашим увлечением, можно лишь с большим преувеличением. Выделить время специально для просмотра фильма - похоже не про Вас. Возможно, Вам нравится читать книги, либо Вы имеете какое-то другое хобби</p>
+                </div>
+        `;
+        answersContainer.remove();
     }
     
+    nextBtn.addEventListener('click', () => {
+        location.reload(); 
+    });
     
     
 }

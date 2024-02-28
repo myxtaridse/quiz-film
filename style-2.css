@@ -129,6 +129,9 @@ body {
         text-shadow: 1px 2px 1px rgb(167, 1, 2);
     }
 }*/
+
+
+
 @media (hover: hover) {
     .arrow-container:hover {
         background-color: black;
@@ -171,6 +174,24 @@ body {
     top: 200px;
     left: 130px;
     border-radius: 10px;
+}
+
+.text-score {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0;
+    row-gap: 20px;
+    padding: 10px;
+}
+.text-score h1{
+    font-size: 18px;
+}
+.text-score p{
+    font-size: 12px;
 }
 
 @media screen and (min-width: 490px) {
@@ -241,6 +262,16 @@ body {
     .text-arrow {
         display: none;
     }
+    .text-score {
+        row-gap: 20px;
+        padding: 30px;
+    }
+    .text-score h1{
+        font-size: 30px;
+    }
+    .text-score p{
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -269,6 +300,16 @@ body {
     }
     .text-arrow {
         display: inline-block;
+    }
+    .text-score {
+        row-gap: 30px;
+        padding: 40px;
+    }
+    .text-score h1{
+        font-size: 34px;
+    }
+    .text-score p{
+        font-size: 16px;
     }
 }
 
@@ -323,6 +364,16 @@ body {
     .text-arrow {
         display: none;
     }
+    .text-score {
+        row-gap: 30px;
+        padding: 40px;
+    }
+    .text-score h1{
+        font-size: 38px;
+    }
+    .text-score p{
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 1220px) {
@@ -368,6 +419,16 @@ body {
     .text-arrow {
         display: none;
     }
+    .text-score {
+        row-gap: 30px;
+        padding: 40px;
+    }
+    .text-score h1{
+        font-size: 44px;
+    }
+    .text-score p{
+        font-size: 22px;
+    }
 }
 
 @media screen and (min-width: 1260px) {
@@ -411,6 +472,16 @@ body {
         left: 130px;
         border-radius: 10px;
     }
+    .text-score {
+        row-gap: 30px;
+        padding: 40px;
+    }
+    .text-score h1{
+        font-size: 46px;
+    }
+    .text-score p{
+        font-size: 24px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -432,6 +503,16 @@ body {
     }
     .arrow-container{
         right: -55px;
+    }
+    .text-score {
+        row-gap: 30px;
+        padding: 40px;
+    }
+    .text-score h1{
+        font-size: 56px;
+    }
+    .text-score p{
+        font-size: 32px;
     }
 }
 
