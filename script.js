@@ -125,19 +125,23 @@ const questions = [
             {text: 'Машину', correct: false}
         ],
         img: './img/12.webp'
-    }/*,
-    {
-        question: 'Сколько лет Хатико ждал своего хозяина после его смерти в фильме "Хатико: Самый верный друг"?',
-        answers: [
-            {text: '12 лет', correct: false},
-            {text: '7 лет', correct: false},
-            {text: '9 лет', correct: true},
-            {text: '4 года', correct: false}
-        ],
-        img: './img/1.webp'
-    }*/
+    }
 ];
 
+const resultsText = {
+    high: {
+        title: 'Вы настоящий киноман!',
+        text: 'На большое количество вопросов Вы ответили верно. Похоже просмотр фильмов - одно из ваших любимых занятий!',
+    },
+    middle: {
+        title: 'Иногда Вы не прочь посмотреть фильмы',
+        text: 'Ярым фанатом кинематографа Вас, конечно, нельзя назвать. Однако просмотр фильмов Вас явно не чужд, и в свободное время Вы не прочь посмотреть кино.',
+    },
+    low: {
+        title: 'Похоже Вы не любитель кино',
+        text: 'Назвать просмотр фильмов вашим увлечением, можно лишь с большим преувеличением. Выделить время специально для просмотра фильма - похоже не про Вас. Возможно, Вам нравится читать книги, либо Вы имеете какое-то другое хобби',
+    }
+}
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -194,36 +198,31 @@ const showScore = () => {
     questionText.innerHTML = `Вы набрали ${score} из ${questions.length}`;
     
     if (score <= 12 && score > 8) {
-        scoreText.innerHTML = `
-                <div class='text-score'>
-                    <h1>Вы настоящий киноман!</h1>
-                    <p>На большое количество вопросов Вы ответили верно. Похоже просмотр фильмов - одно из ваших любимых занятий!</p>
-                </div>
-        `;
-        answersContainer.remove();
+        const { title, text } = resultsText.high
+        scoreText.replaceChildren(showScoreText(title, text))
     } else if (score <= 7 && score >= 3) {
-        picture.innerHTML = `
-                <div class='text-score'>
-                    <h1>Иногда Вы не прочь посмотреть фильмы</h1>
-                    <p>Ярым фанатом кинематографа Вас, конечно, нельзя назвать. Однако просмотр фильмов Вас явно не чужд, и в свободное время Вы не прочь посмотреть кино.</p>
-                </div>
-        `;
-        answersContainer.remove();
+        const { title, text } = resultsText.middle
+        scoreText.replaceChildren(showScoreText(title, text))
     } else if (score <= 2 && score >= 0) {
-        picture.innerHTML = `
-                <div class='text-score'>
-                    <h1>Похоже Вы не любитель кино</h1>
-                    <p>Назвать просмотр фильмов вашим увлечением, можно лишь с большим преувеличением. Выделить время специально для просмотра фильма - похоже не про Вас. Возможно, Вам нравится читать книги, либо Вы имеете какое-то другое хобби</p>
-                </div>
-        `;
-        answersContainer.remove();
+        const { title, text } = resultsText.low
+        scoreText.replaceChildren(showScoreText(title, text))
     }
     
     nextBtn.addEventListener('click', () => {
         location.reload(); 
     });
-    
-    
+}
+
+const showScoreText = (title, text) => {
+    const div = document.createElement('div')
+    div.className = 'text-score'
+    const h1 = document.createElement('h1')
+    h1.textContent = title
+    const p = document.createElement('p')
+    p.textContent = text
+
+    div.append(h1, p)
+    return div
 }
 
 const nextQuestion = () => {
@@ -236,6 +235,7 @@ const nextQuestion = () => {
 }
 
 nextBtn.addEventListener('click', () => {
+    console.log(currentQuestionIndex)
     if (currentQuestionIndex < questions.length) {
         nextQuestion();
     } else {
